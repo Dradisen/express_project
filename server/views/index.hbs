@@ -4,9 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/libs/bootstrap/dist/css/bootstrap.min.css">
     <title>andpop</title>
 </head>
 <body>
+    <div class="container">
     <h1>ANDPOP</h1>
+    <form method="post">
+        <input type="number" name="direction" id="direction">
+        <input type="text" name="name_direction" id="name_direction">
+        <input type="submit" value="Send">
+    </form>
+    {{#each discipline}}
+        {{id_direction}}<br>
+        {{name_direction}}<br><br>
+    {{/each}}
+    </div>
 </body>
+<script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 </html>

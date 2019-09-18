@@ -11,15 +11,15 @@ let sql = new Sequelize(db.database, db.name, db.password, {
       }
 });
 
-let User = require('./Schema')(sql, Sequelize);
+let Schema = require('./Schema')(sql, Sequelize);
 
 sql.authenticate().then(() => {
     console.log('Connection is ok');
 }).catch((err) => {
     console.log(err);
-})
+});
 
-sql.sync({force: true}).then((result) => {
+sql.sync(/*{force: true}*/).then((result) => {
     console.log('database is created');
     
 }).catch((err) => {
@@ -27,3 +27,4 @@ sql.sync({force: true}).then((result) => {
 })
 
 module.exports = sql;
+module.exports.Schema = Schema;

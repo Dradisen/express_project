@@ -1,0 +1,13 @@
+<div class="container">
+    <form method="post" class="form-group">
+        <input type="text" name="name_group" id="name_group">
+        <select name="id_direction" id="id_direction">
+            {{#if array }}
+                {{#each array}}
+                    <option value="{{this.id_direction}}">{{this.name_direction}}</option>
+                {{/each}}
+            {{/if}}
+        </select>
+        <input type="submit" value="Создать группу">
+    </form>
+</div>

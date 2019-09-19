@@ -8,18 +8,10 @@
     <title>andpop</title>
 </head>
 <body>
-    <div class="container">
-    <h1>ANDPOP</h1>
-    <form method="post">
-        <input type="number" name="direction" id="direction">
-        <input type="text" name="name_direction" id="name_direction">
-        <input type="submit" value="Send">
-    </form>
-    {{#each discipline}}
-        {{id_direction}}<br>
-        {{name_direction}}<br><br>
-    {{/each}}
-    </div>
+    <header class="container-fluid">
+        <a href="/"><h1>Сервис</h1></a>
+    </header>
+    {{{body}}}
 </body>
 <script src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
 </html>

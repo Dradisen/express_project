@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Добавить направление подготовки</h1>
+    {{#if error}}
+        <p>{{error}}</p>
+    {{/if}}
+    {{#if success}}
+        <p>{{success}}</p>
+    {{/if}}
+    <form method="post">
+        <div class="form-group">
+            <input type="number" name="direction" id="direction">
+        </div>
+        <div class="form-group">
+            <input type="text" name="name_direction" id="name_direction">
+        </div>
+        <input type="submit" value="Добавить">
+    </form>
+</div>

@@ -67,11 +67,6 @@ module.exports = function(sql, datatype){
         Disciplines.hasMany(Ratings, {foreignKey: 'id_discipline'});
         Students.hasMany(Ratings, {foreignKey: 'id_student'});
 
-        //Disciplines.hasMany(Exams, {foreignKey: 'id_discipline'})
-        //Exams.belongsTo(Users, {foreignKey: 'id'});
-
-        //Disciplines.belongsTo(Exams, {foreignKey: 'id_disciplines', sourceKey: 'id'});
-        
         return {
             Direction: Directions,
             Group: Groups,

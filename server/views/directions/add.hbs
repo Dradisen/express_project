@@ -1,10 +1,11 @@
 <div class="container">
     <h1>Добавить направление подготовки</h1>
-    {{#if error}}
-        <p>{{error}}</p>
-    {{/if}}
-    {{#if success}}
-        <p>{{success}}</p>
+    {{#if added }}
+        {{#if success}}
+            <p class="alert alert-success">Поле добавлено!</p>
+        {{else}}
+            <p class="alert alert-danger">Такое поле уже существует!</p>
+        {{/if}}
     {{/if}}
     <form method="post">
         <div class="form-group">

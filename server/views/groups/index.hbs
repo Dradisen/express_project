@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Список групп</h1>
+
+    <table class="table">
+    <thead>
+        <tr>
+            <th>#Подготовки</th>
+            <th>Название группы</th>
+            <th>Изменить</th>
+            <th>Удалить</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each groups}}
+        <tr>
+            <td>{{id_direction}}</td>
+            <td>{{name}}</td>
+            <td><a href="/groups/edit/{{id}}">Изменить</a></td>
+            <td><a href="/groups/delete/{{id}}">Удалить</a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+    </table>
+    <a href="/groups/add" class="btn btn-primary">Добавить</a>
+</div>

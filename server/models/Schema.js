@@ -39,12 +39,12 @@ module.exports = function(sql, datatype){
         
         GroupDisciplines = sql.define('group_disciplines', {
             id_group: datatype.INTEGER,
-            id_discipline: datatype.INTEGER
+            id_discipline: datatype.STRING(50)
         });
 
         Disciplines = sql.define('disciplins', {
             id_discipline: {
-                type: datatype.INTEGER,
+                type: datatype.STRING(50),
                 primaryKey: true
             },
             discipline: datatype.STRING(300),
@@ -52,7 +52,7 @@ module.exports = function(sql, datatype){
 
         Ratings = sql.define('ratings', {
             id_student: datatype.INTEGER,
-            id_discipline: datatype.INTEGER,
+            id_discipline: datatype.STRING(50),
             rating: datatype.INTEGER,
             score: {
                 type: datatype.ENUM,

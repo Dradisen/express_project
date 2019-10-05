@@ -21,6 +21,7 @@ app.use(bodyParser.json());
 app.use('/directions', require('./routers/directions'));
 app.use('/groups', require('./routers/groups'));
 app.use('/students', require('./routers/students'));
+app.use('/disciplins', require('./routers/disciplins'));
 
 // app.get('/groups/:id', async (req, res) => {
 //     let data = []

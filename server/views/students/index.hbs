@@ -4,15 +4,15 @@
     <table class="table">
     <thead>
         <tr>
-            <th>#Студенческого билета</th>
-            <th>Номер группы</th>
+            <th>#билета</th>
+            <th>#группы</th>
             <th>Фамилия</th>
             <th>Имя</th>
             <th>Отчество</th>
             <th>Пол</th>
             <th>Дата Рождения</th>
-            <th>Дата выдачи студенческого</th>
-            <th>Признак старосты</th>
+            <th>Дата выдачи билета</th>
+            <!--th>Признак старосты</th-->
             <th>изменить</th>
             <th>удалить</th>
         </tr>
@@ -28,7 +28,7 @@
             <td>{{gender}}</td>
             <td>{{birthday}}</td>
             <td>{{get_card}}</td>
-            <td>{{is_head}}</td>
+            <!--td>{{is_head}}</td-->
             <td><a href="/students/edit/{{id}}">Изменить</a></td>
             <td><a href="/students/delete/{{id}}">Удалить</a></td>
         </tr>
@@ -36,4 +36,5 @@
     </tbody>
     </table>
     <a href="/students/add" class="btn btn-primary">Добавить</a>
+    <a href="./" class="btn btn-primary">Назад</a>
 </div>

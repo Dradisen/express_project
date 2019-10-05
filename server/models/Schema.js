@@ -31,8 +31,8 @@ module.exports = function(sql, datatype){
                 type: datatype.ENUM,
                 values: ['M', 'F']
             },
-            birthday: datatype.DATE,
-            get_card: datatype.DATE,
+            birthday: datatype.DATEONLY,
+            get_card: datatype.DATEONLY,
             is_Head: datatype.BOOLEAN,
             id_group: datatype.INTEGER
         });

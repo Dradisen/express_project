@@ -1,27 +1,40 @@
 <div class="container">
-    <form method="post">
+    <form method="post" class="offset-3 col-6">
         <div class="form-group">
-            <input type="text" name="name" id="name">
-            <input type="text" name="surname" id="surname">
-            <input type="text" name="lastname" id="lastname">
+            <label for="surname">Фамилия:</label>
+            <input type="text" name="surname" id="surname" class="form-control">
         </div>
         <div class="form-group">
-            <select name="gender" id="gender">
+            <label for="name">Имя:</label>
+            <input type="text" name="name" id="name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="lastname">Отчество:</label>
+            <input type="text" name="lastname" id="lastname" class="form-control">
+        </div>
+        
+        <div class="form-group">
+            <label for="gender">Пол:</label>
+            <select name="gender" id="gender" class="form-control">
                 <option value="M">Мужчина</option>
                 <option value="F">Девушка</option>
             </select>
         </div>
         <div class="form-group">
-            <input type="date" name="birthday" id="birthday">
+            <label for="birthday">День рождения:</label>
+            <input type="date" name="birthday" id="birthday" class="form-control">
         </div>
         <div class="form-group">
-            <input type="date" name="get_card" id="get_card">
+            <label for="get_card">Дата получения студ. билета:</label>
+            <input type="date" name="get_card" id="get_card" class="form-control">
         </div>
         <div class="form-check">
-            <input type="checkbox" name="is_head" id="is_head">
+            <input type="checkbox" name="is_head" id="is_head" class="form-check-input">
+            <label for="is_head">Признак старосты</label>
         </div>
         <div class="form-group">
-            <select name="id_group" id="id_group">
+            <label for="id_group">Номер группы:</label>
+            <select name="id_group" id="id_group" class="form-control">
                 {{#if groups}}
                     {{#each groups}}
                         <option value="{{this.id}}">{{this.name}}</option>
@@ -29,6 +42,7 @@
                 {{/if}}
             </select>
         </div>
-        <input type="submit" value="Создать группу">
+        <input type="submit" value="Добавить студента" class="btn btn-primary">
+        <a href="./" class="btn btn-primary">Назад</a>
     </form>
 </div>

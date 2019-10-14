@@ -10,7 +10,10 @@ module.exports = function(sql, datatype){
         });
         
         Groups = sql.define('group',{
-            name: datatype.INTEGER,
+            name: {
+                type: datatype.STRING(50),
+                primaryKey: true
+            },
             id_direction: datatype.INTEGER
         });
         
@@ -34,7 +37,7 @@ module.exports = function(sql, datatype){
             birthday: datatype.DATEONLY,
             get_card: datatype.DATEONLY,
             is_Head: datatype.BOOLEAN,
-            id_group: datatype.INTEGER
+            id_group: datatype.STRING(50)
         });
         
         GroupDisciplines = sql.define('group_disciplines', {
@@ -62,7 +65,7 @@ module.exports = function(sql, datatype){
 
         Directions.hasMany(Groups, {foreignKey: 'id_direction'});
         Groups.hasMany(Students, {foreignKey: 'id_group'});
-        Groups.hasMany(GroupDisciplines, {foreignKey: 'id_group'});
+        //Groups.hasMany(GroupDisciplines, {foreignKey: 'id_group'});
         Disciplines.hasMany(GroupDisciplines, {foreignKey: 'id_discipline'});
         Disciplines.hasMany(Ratings, {foreignKey: 'id_discipline'});
         Students.hasMany(Ratings, {foreignKey: 'id_student'});

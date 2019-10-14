@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container-fluid">
     <h1>Список студентов</h1>
 
     <table class="table">
@@ -13,6 +13,7 @@
             <th>Дата Рождения</th>
             <th>Дата выдачи билета</th>
             <!--th>Признак старосты</th-->
+            <th><a href="#">Результаты экзаменов</a></th>
             <th>изменить</th>
             <th>удалить</th>
         </tr>
@@ -29,6 +30,7 @@
             <td>{{birthday}}</td>
             <td>{{get_card}}</td>
             <!--td>{{is_head}}</td-->
+            <td>Посмотреть</td>
             <td><a href="/students/edit/{{id}}">Изменить</a></td>
             <td><a href="/students/delete/{{id}}">Удалить</a></td>
         </tr>
